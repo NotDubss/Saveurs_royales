@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+/* Chinese godl = #CC9900 */
+/* '' ''   red  =  #AA381E */
+/* Tea color = #923c01  */
+
+:root {
+  --yellow-text: #fff200;
+  --red-text: #EA2027;
+}
+
+/* Main styling */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background : #ccc;
+  color: #fff;
+  font-family: Poppins;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilitaires */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.red-text {
+  color: var(--red-text);
+}
+
+.yellow-text {
+  color: var(--yellow-text);
+}
+
+.current {
+  border-bottom: #ffc20d 2px solid;
+}
+
+
+/* Navbar */
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+#navbar h1 {
+  padding: 5px 20px;
+  margin: 0 15px;
+}
+
+#navbar ul {
+  display: flex;
+}
+
+#navbar a {
+  padding: 5px 20px;
+  margin: 0 15px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#navbar a:hover {
+  border-bottom: #ffc20d 2px solid;
+}
+
+/* Hero */
+
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../img/hero4.jpg) center;
+  height: 100vh;
+}
+
+.content {
+
+  float: left;
+
+  font-size: 1.2rem;
+
+  padding: 30px;
+  margin: 50px 0 0 50px;
+  
+  background: rgba(0, 0, 0, 0.507);
+  border-radius: 10px;
+  overflow: auto;
+  /* border: solid #f00 3px; */
+}
+
+
+
+.horaire-local {
+  display: flex;
+  padding: 30px;
+
+  margin: 50px 0 0 30px;
+}
+
+
+.horaire-local > div {
+  font-size: 1.1rem;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.507);
+}
+
+.horaire-local > div > h3 {
+  color: #EA2027;;
+}
+
+/* Footer */
+
+#footer {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/footer.jpg) center;
+
+  height: 15vh;
+  
+
+}
+
+#footer, #footer a {
+  color:#000;
+}
+
+#footer > div {
+  margin: 30px;
+  margin-left: 60px;
+  padding: 10px;
+  border-radius: 10px;
+
+  font-weight: 200;
+  color: #fff;
+}
+
+
+#footer > div:last-child {
+  margin-left: auto;
+} 
+
+
+/* Thé */
+
+/* Alternate header */
+
+
+#alt-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../img/hero4.jpg) center;
+
+}
+
+.grid-container {
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr 2fr;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../img/tea4.jpg) center;
+  padding: 10px;
+}
+
+.gird-item {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  margin: 30px;
+  border-radius: 10px;
+
+}
+
+.gird-item > h3 {
+  text-align: center;
+}
+
+.gird-image {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 300px;
+  margin: 30px;
+  background: url(../img/hero2.jpg) ;
+  background-size: cover;
+
+}
+
+/* Localisation */
+
+.local-gird-item-1 {grid-area: locali;}
+.local-gird-item-2 {grid-area: maps;}
+.local-gird-item-3 {grid-area: horaire;}
+
+
+.local-gird-container {
+  display: grid;
+  grid-template-areas: 
+  'locali maps'
+  'horaire maps';
+  grid-gap: 20px;
+
+
+  overflow: auto;
+}
+
+.local-gird-container > div:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 1.2rem;
+
+  padding: 20px;
+  margin: 50px 0 0 50px;
+  
+  border-radius: 10px;
+}
+
+.local-gird-container h2, .local-gird-container h3 {
+  text-align: center;
+}
+
+.local-gird-container  p {
+  padding: 15px;
+  line-height: 2;
+}
+
+.local-gird-container:last-child h3 {
+  padding: 10px;
+}
+
+.google-map {
+  color: #ccc;
+ 
+  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 1.2rem;
+
+  padding: 20px;
+  margin: 50px 20px 0 50px;
+  
+  border-radius: 10px;
+}
